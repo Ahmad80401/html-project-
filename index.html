@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>The Art Book Shop</title>
+    <title>Form Example</title>
 </head>
 <body>
 
-<h1>The Art Book Shop</h1>
+<fieldset>
+    <legend>Your Details:</legend>
 
-<ul>
-    <li><a href="#">home</a></li>
-    <li><a href="#">new publications</a></li>
-    <li><a href="#">contact</a></li>
-</ul>
+    Name: <input type="text" size="30"><br><br>
+    Email: <input type="text" size="30"><br><br>
+</fieldset>
 
-<p>Charing Cross Road, London, WC2, UK.</p>
+<br>
 
-<p>Telephone 03212197702</p>
+<fieldset>
+    <legend>Your Review:</legend>
 
-<p>Email <a href="mailto:books@example.com">books@example.com</a></p>
+    How did you hear about us?
+    <select>
+        <option>Google</option>
+        <option>Newspaper</option>
+        <option>Book</option>
+    </select>
 
-<!-- Google Map iframe -->
-<iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1812.392035853507!2d67.068993!3d24.927581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f1da2f8b36b%3A0xb2dba2e8c3440f29!2sAzizabad%2C%20Karachi!5e0!3m2!1sen!2s!4v1700000000000" 
-    width="350" 
-    height="250" 
-    style="border:1px solid #000;">
-</iframe>
+    <br><br>
 
-<br><br>
+    Would you visit again?<br>
+    <input type="radio" name="visit"> Yes
+    <input type="radio" name="visit"> No
+    <input type="radio" name="visit"> Maybe
+    <br><br>
 
-<p>The Art Bookshop</p>
+    Comments:<br>
+    <textarea rows="4" cols="40"></textarea>
+    <br><br>
+
+    <input type="checkbox" checked> Sign me up for email updates
+    <br><br>
+
+    <input type="submit" value="Submit review">
+</fieldset>
 
 </body>
 </html>
