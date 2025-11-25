@@ -1,46 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Form Example</title>
+<meta charset="UTF-8">
+<title>Survey Form</title>
+
+<style>
+    body {
+        background-color: #a7dcd5;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        width: 60%;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    p.description {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    label {
+        display: inline-block;
+        width: 250px;
+        margin: 10px 0;
+        vertical-align: top;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    input[type="number"] {
+        padding: 6px;
+        width: 230px;
+    }
+
+    textarea {
+        width: 100%;
+        height: 80px;
+        margin-top: 10px;
+    }
+
+    .checkbox-group,
+    .radio-group {
+        margin-left: 260px;
+        margin-top: -10px;
+    }
+</style>
+
 </head>
 <body>
 
-<fieldset>
-    <legend>Your Details:</legend>
+<h1>Survey Form</h1>
 
-    Name: <input type="text" size="30"><br><br>
-    Email: <input type="text" size="30"><br><br>
-</fieldset>
+<div class="container">
 
-<br>
+    <p class="description">Let us know how we can improve freeCodeCamp</p>
 
-<fieldset>
-    <legend>Your Review:</legend>
+    <label>* Name:</label>
+    <input type="text" placeholder="Enter your name"><br>
 
-    How did you hear about us?
+    <label>* Email:</label>
+    <input type="email" placeholder="Enter your Email"><br>
+
+    <label>* Age:</label>
+    <input type="number" placeholder="Age"><br>
+
+    <label>Which option best describes your current role?</label>
     <select>
-        <option>Google</option>
-        <option>Newspaper</option>
-        <option>Book</option>
-    </select>
+        <option>Student</option>
+        <option>Full-time Job</option>
+        <option>Part-time Job</option>
+        <option>Other</option>
+    </select><br>
 
-    <br><br>
+    <label>* How likely is that you would recommend freeCodeCamp to a friend?</label>
+    <div class="radio-group">
+        <input type="radio" name="recommend"> Definitely <br>
+        <input type="radio" name="recommend"> Maybe <br>
+        <input type="radio" name="recommend"> Not sure <br>
+    </div>
 
-    Would you visit again?<br>
-    <input type="radio" name="visit"> Yes
-    <input type="radio" name="visit"> No
-    <input type="radio" name="visit"> Maybe
-    <br><br>
+    <label>What do you like most in FCC:</label>
+    <select>
+        <option>Select an option</option>
+        <option>Challenges</option>
+        <option>Projects</option>
+        <option>Community</option>
+    </select><br>
 
-    Comments:<br>
-    <textarea rows="4" cols="40"></textarea>
-    <br><br>
+    <label>Things that should be improved in the future<br>(Check all that apply):</label>
+    <div class="checkbox-group">
+        <input type="checkbox"> Front-end Projects <br>
+        <input type="checkbox"> Back-end Projects <br>
+        <input type="checkbox"> Data Visualization <br>
+    </div>
 
-    <input type="checkbox" checked> Sign me up for email updates
-    <br><br>
-
-    <input type="submit" value="Submit review">
-</fieldset>
+</div>
 
 </body>
 </html>
